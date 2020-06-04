@@ -1,0 +1,38 @@
+package examples;
+
+public class various_functions1 {
+
+   //int array[];
+
+
+
+
+
+    public static void add(int index, int element) {
+
+        int[] array = new int[10];//?
+
+
+        if (index > array.length || index < 0) {
+
+            System.out.println("ArrayIndexOutOfBoundsException : index is out of range (index < 0 || index > size())");
+        }
+
+        int[] temp = new int[array.length + 1]; // включение массива в новый массив + 1 элемент 
+
+
+        
+
+        for (int i = 0; i < array.length; i++) {
+
+            if (i < index) { // если текущий элемент меньше индекса вставки
+                temp[i] = array[i];  // копируем
+
+            } else { //иначе копируем со сдвигом
+                temp[i + 1] = array[i];
+            }
+        }
+
+
+    }
+}
